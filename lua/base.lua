@@ -11,15 +11,15 @@ vim.go.maplocalleader = ' '
 --Options
 -----------------------------------------------
 
---Set highlight on search
+--Set highlight 
 vim.o.hlsearch = false
 vim.o.incsearch = true
 
---Make line numbers default
+--Make line numbers and relative numbers
 vim.wo.number = true
 vim.wo.relativenumber = true
 
---Enable mouse mode
+--Disable mouse mode
 vim.o.mouse = nil
 -- Seems now neovim has mouse enable by default since around July...
 
@@ -40,6 +40,12 @@ vim.wo.signcolumn = 'yes'
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
+-- Set folding to manual
+vim.o.foldmethod = 'manual'
+
+-- Set clipboard
+vim.g.clipboard ='unnamedplus'
+
 -- More options
 vim.o.background = 'dark'
 vim.o.autoread = true
@@ -58,4 +64,7 @@ vim.o.cmdheight = 2
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.scrolloff = 8
+vim.o.statuscolumn = true
+
+-- Diagnostics Conf
 
