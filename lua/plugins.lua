@@ -50,5 +50,6 @@ return require('packer').startup(function(use)
   use { 'github/copilot.vim' }
   -- Glow
   use { 'ellisonleao/glow.nvim' }
+  use { 'nvim-neorg/neorg' }
   use { 'folke/trouble.nvim' , requires = { 'kyazdani42/nvim-web-devicons'} }
 end)

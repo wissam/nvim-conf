@@ -43,8 +43,6 @@ vim.o.completeopt = 'menuone,noselect'
 -- Set folding to manual
 vim.o.foldmethod = 'manual'
 
--- Set clipboard
-vim.g.clipboard ='unnamedplus'
 
 -- More options
 vim.o.background = 'dark'

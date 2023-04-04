@@ -164,6 +164,11 @@ _G.packer_plugins = {
     path = "/home/wissam/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neorg = {
+    loaded = true,
+    path = "/home/wissam/.local/share/nvim/site/pack/packer/start/neorg",
+    url = "https://github.com/nvim-neorg/neorg"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/wissam/.local/share/nvim/site/pack/packer/start/nvim-cmp",
