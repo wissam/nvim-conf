@@ -1,16 +1,15 @@
 -- same as plugin = require('lsp-zero') in a try/catch block in other langs
-local status, plugin = pcall(require, 'lsp-zero')
+local status, lsp = pcall(require, 'lsp-zero')
 if not status then
-    print('Something went wrong:', plugin)
+    print('Something went wrong:', lsp)
 else
-    plugin.preset('recommended')
-    plugin.on_attach(function(client, bufnr)
-        plugin.default_keymaps({buffer = bufnr})
+    lsp.preset('recommended')
+    lsp.on_attach(function(client, bufnr)
+        lsp.default_keymaps({buffer = bufnr})
     end)
-    require('lspconfig').gopls.setup(plugin.setup({
+    require('lspconfig').gopls.setup({
         cmd = {'gopls'},
         filetypes = {'go', 'gomod','gowork','gotmpl'},
-        root_dir = plugin.root_pattern('go.mod', '.git'),
         single_file_support = true,
         settings = {
             gopls = {
@@ -21,9 +20,9 @@ else
                 gofumpt = true,
             },
         },
-    }))
+    })
 
-    plugin.setup()
+    lsp.setup()
     vim.diagnostic.config({
         virtual_text = true,
         signs = true,
