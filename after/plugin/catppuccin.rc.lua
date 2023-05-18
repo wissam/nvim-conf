@@ -3,7 +3,9 @@ local status, plugin = pcall(require, 'catppuccin')
 if not status then
   print('Something went wrong:', plugin)
 else
-  plugin.setup()
-  vim.g.catppuccin_flavour = "macchiato"
+  plugin.setup({
+        flavour = "macchiato",
+        transparent_background = true,
+    })
   vim.cmd [[colorscheme catppuccin]]
 end

@@ -52,4 +52,5 @@ return require('packer').startup(function(use)
   use { 'ellisonleao/glow.nvim' }
   use { 'nvim-neorg/neorg' }
   use { 'folke/trouble.nvim' , requires = { 'kyazdani42/nvim-web-devicons'} }
+  use { 'kylechui/nvim-surround' }
 end)

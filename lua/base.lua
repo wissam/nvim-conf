@@ -64,5 +64,4 @@ vim.o.splitright = true
 vim.o.scrolloff = 8
 vim.o.statuscolumn = true
 
--- Diagnostics Conf
 
