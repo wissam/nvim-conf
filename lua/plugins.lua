@@ -53,4 +53,9 @@ return require('packer').startup(function(use)
   use { 'nvim-neorg/neorg' }
   use { 'folke/trouble.nvim' , requires = { 'kyazdani42/nvim-web-devicons'} }
   use { 'kylechui/nvim-surround' }
+  use { 'mfussenegger/nvim-dap' }
+  use { 'leoluz/nvim-dap-go' }
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+  use { 'nvim-telescope/telescope-dap.nvim' }
+  use { 'theHamsta/nvim-dap-virtual-text' }
 end)
