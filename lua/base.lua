@@ -4,7 +4,7 @@
 
 -- Remap space as leader key
 vim.g.mapleader = ' '
-vim.go.maplocalleader = ' '
+-- vim.go.maplocalleader = ' '
 
 
 -----------------------------------------------
@@ -62,6 +62,6 @@ vim.o.cmdheight = 2
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.scrolloff = 8
-vim.o.statuscolumn = true
+-- vim.o.statuscolumn = true
 
 

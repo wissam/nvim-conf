@@ -25,6 +25,7 @@ else
         "markdown",
         "toml",
         "sql",
+        "terraform",
       },
       auto_install = true,
       sync_install = false,

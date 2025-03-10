@@ -16,7 +16,8 @@ else
 end
 
 -- Enable telescope fzf native
-telescope.load_extension('fzf')
+-- telescope.load_extension('fzf')
+
 
 --Add leader shortcuts
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers)

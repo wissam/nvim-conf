@@ -1,5 +1,6 @@
-require('base')
-require('maps')
-require('plugins')
-require('autocommands')
-require('filetype')
+require("base")
+require("maps")
+require("config.lazy")
+require("autocommands")
+require("filetype")
+
