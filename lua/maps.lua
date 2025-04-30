@@ -6,7 +6,7 @@ vim.keymap.set({ 'n', 'v' }, '<Tab>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- diagnostic_goto
+-- Severity-specific diagnostic navigation keymaps
 local diagnostic_goto = function(next, severity)
   local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
   severity = severity and vim.diagnostic.severity[severity] or nil
@@ -14,11 +14,8 @@ local diagnostic_goto = function(next, severity)
     go({ severity = severity })
   end
 end
--- Diagnostics keymaps
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+-- Keep only the specialized diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
-vim.keymap.set("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
-vim.keymap.set("n", "[d", diagnostic_goto(false), { desc = "Prev Diagnostic" })
 vim.keymap.set("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
 vim.keymap.set("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
 vim.keymap.set("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })

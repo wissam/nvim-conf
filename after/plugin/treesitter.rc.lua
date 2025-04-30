@@ -23,7 +23,6 @@ else
         "yaml",
         "hcl",
         "markdown",
-        "toml",
         "sql",
         "terraform",
       },
